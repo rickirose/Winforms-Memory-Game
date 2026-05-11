@@ -12,10 +12,11 @@ namespace Leaño_Linchangco_FinalProject
 
         private Button firstClicked;
         private Button secondClicked;
-        private int timeLeft = 120; //2 mins
+        private int score = 100;
         private bool isFlipping = false;
         private bool isBusy = false;
         private string currentPlayerName;
+        private int consecutiveMatches = 0;
 
         public Form1()
         {
@@ -121,13 +122,27 @@ namespace Leaño_Linchangco_FinalProject
         {
             if (firstClicked.Text == secondClicked.Text)
             {
+                // Combo increase
+                consecutiveMatches++;
+
+                // Base score increase
+                int baseGain = 10;
+
+                // Combo Multiplier (1.5x)
+                double multiplier = Math.Pow(1.5, consecutiveMatches - 1);
+                int gainedScore = (int)(baseGain * multiplier);
+                score += gainedScore;
+                UpdateScore();
+
                 firstClicked = null;
                 secondClicked = null;
                 CheckWin();
             }
             else
             {
-                timeLeft -= 5; // Lose 5 points/seconds
+                // Reset combo
+                consecutiveMatches = 0;
+
                 UpdateScore();
 
                 await Task.Delay(1000); // Let the player see their mistake
@@ -142,20 +157,16 @@ namespace Leaño_Linchangco_FinalProject
 
         private void GameTimer_Tick(object sender, EventArgs e)
         {
-            timeLeft--;
-            UpdateScore();
-
-            if (timeLeft <= 0)
+            if (score > 10)
             {
-                gameTimer.Stop();
-                MessageBox.Show("Time's up! You lose!");
-                ReturnToPlayerForm();
+                score--;
+                UpdateScore();
             }
         }
 
         private void UpdateScore()
         {
-            lblScore.Text = "Score: " + timeLeft;
+            lblScore.Text = "Score: " + score + "PTS";
         }
 
         private void CheckWin()
@@ -167,7 +178,7 @@ namespace Leaño_Linchangco_FinalProject
                     return;
             }
             gameTimer.Stop();
-            MessageBox.Show("Congratulations! You win!");
+            MessageBox.Show($"Congratulations {currentPlayerName} ! You completed the board!\nFinal Score: {score}");
             // save high score
             // show leaderboards
             ReturnToPlayerForm();
@@ -178,7 +189,7 @@ namespace Leaño_Linchangco_FinalProject
             // Clear buttons and reset variables
             firstClicked = null;
             secondClicked = null;
-            timeLeft = 120;
+
             UpdateScore();
             tableLayoutPanel1.Controls.Clear();
             icons = new List<string>()
@@ -211,6 +222,11 @@ namespace Leaño_Linchangco_FinalProject
             ResetGame();
 
             this.Show(); // show game again
+        }
+
+        private void lblScore_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

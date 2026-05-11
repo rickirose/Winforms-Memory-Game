@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -43,10 +43,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
@@ -58,8 +54,7 @@
               "RelativeToolTip": "Lea\u00F1o_Linchangco-FinalProject\\Form1.Designer.cs",
               "ViewState": "AgIAAC8AAAAAAAAAAADgv0IAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T11:29:08.475Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T11:29:08.475Z"
             },
             {
               "$type": "Document",
@@ -71,8 +66,7 @@
               "RelativeToolTip": "Lea\u00F1o_Linchangco-FinalProject\\PlayerForm.Designer.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAArwCoAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T10:27:38.619Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T10:27:38.619Z"
             },
             {
               "$type": "Document",
@@ -95,10 +89,14 @@
               "RelativeDocumentMoniker": "Lea\u00F1o_Linchangco-FinalProject\\Form1.cs",
               "ToolTip": "C:\\Users\\WINDOWS 10 PRO\\Documents\\School_Stuff\\Ateneo\\CLASSES\\3rd_Year_Sem2\\ISCS\\Winforms-Memory-Game\\Leano_Linchangco-FinalProject\\Lea\u00F1o_Linchangco-FinalProject\\Form1.cs",
               "RelativeToolTip": "Lea\u00F1o_Linchangco-FinalProject\\Form1.cs",
-              "ViewState": "AgIAAJkAAAAAAAAAAADwv6wAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAALkAAAAAAAAAAAAUwL0AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-09T10:24:10.744Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
@@ -109,8 +107,7 @@
               "ToolTip": "C:\\Users\\WINDOWS 10 PRO\\Documents\\School_Stuff\\Ateneo\\CLASSES\\3rd_Year_Sem2\\ISCS\\Winforms-Memory-Game\\Leano_Linchangco-FinalProject\\Lea\u00F1o_Linchangco-FinalProject\\PlayerForm.cs [Design]",
               "RelativeToolTip": "Lea\u00F1o_Linchangco-FinalProject\\PlayerForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T10:17:41.555Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-05-11T10:17:41.555Z"
             },
             {
               "$type": "Document",
@@ -121,8 +118,7 @@
               "ToolTip": "C:\\Users\\WINDOWS 10 PRO\\Documents\\School_Stuff\\Ateneo\\CLASSES\\3rd_Year_Sem2\\ISCS\\Winforms-Memory-Game\\Leano_Linchangco-FinalProject\\Lea\u00F1o_Linchangco-FinalProject\\Form1.cs [Design]",
               "RelativeToolTip": "Lea\u00F1o_Linchangco-FinalProject\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T04:44:49.579Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-05-09T04:44:49.579Z"
             }
           ]
         }

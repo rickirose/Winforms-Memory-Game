@@ -64,7 +64,7 @@
             lblScore.Name = "lblScore";
             lblScore.Size = new Size(66, 15);
             lblScore.TabIndex = 1;
-            lblScore.Text = "Score: 120";
+            lblScore.Text = "Score: 100 PTS";
             // 
             // gameTimer
             // 
