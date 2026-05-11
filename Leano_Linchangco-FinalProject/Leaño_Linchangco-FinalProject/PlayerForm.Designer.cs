@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
+            tbxName = new TextBox();
             btnPlay = new Button();
             label1 = new Label();
             label2 = new Label();
             SuspendLayout();
             // 
-            // textBox1
+            // tbxName
             // 
-            textBox1.Location = new Point(357, 218);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 0;
-            textBox1.TextChanged += textBox1_TextChanged;
+            tbxName.Location = new Point(357, 218);
+            tbxName.Name = "tbxName";
+            tbxName.Size = new Size(100, 23);
+            tbxName.TabIndex = 0;
+            tbxName.TextChanged += textBox1_TextChanged;
             // 
             // btnPlay
             // 
@@ -83,7 +83,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnPlay);
-            Controls.Add(textBox1);
+            Controls.Add(tbxName);
             Name = "PlayerForm";
             Text = "Form2";
             ResumeLayout(false);
@@ -92,7 +92,7 @@
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox tbxName;
         private Button btnPlay;
         private Label label1;
         private Label label2;

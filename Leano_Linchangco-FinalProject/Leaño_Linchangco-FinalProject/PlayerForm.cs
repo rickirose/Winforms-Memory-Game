@@ -20,13 +20,13 @@ namespace Leaño_Linchangco_FinalProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            if (string.IsNullOrWhiteSpace(tbxName.Text))
             {
                 MessageBox.Show("Please enter a name!");
                 return;
             }
 
-            PlayerName = textBox1.Text.Trim();
+            PlayerName = tbxName.Text.Trim();
 
             this.DialogResult = DialogResult.OK;
             this.Close();
@@ -34,7 +34,7 @@ namespace Leaño_Linchangco_FinalProject
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            btnPlay.Enabled = !string.IsNullOrWhiteSpace(textBox1.Text);
+            btnPlay.Enabled = !string.IsNullOrWhiteSpace(tbxName.Text);
         }
     }
 }

@@ -149,13 +149,13 @@ namespace Leaño_Linchangco_FinalProject
             {
                 gameTimer.Stop();
                 MessageBox.Show("Time's up! You lose!");
-                ResetGame();
+                ReturnToPlayerForm();
             }
         }
 
         private void UpdateScore()
         {
-            // lblScore.Text = something to show score
+            lblScore.Text = "Score: " + timeLeft;
         }
 
         private void CheckWin()
@@ -169,7 +169,8 @@ namespace Leaño_Linchangco_FinalProject
             gameTimer.Stop();
             MessageBox.Show("Congratulations! You win!");
             // save high score
-            ResetGame();
+            // show leaderboards
+            ReturnToPlayerForm();
         }
 
         private void ResetGame()
@@ -190,6 +191,26 @@ namespace Leaño_Linchangco_FinalProject
             AssignIconsToButtons();
             gameTimer.Start();
 
+        }
+        private void ReturnToPlayerForm()
+        {
+            this.Hide(); // hide game form
+
+            using (PlayerForm pf = new PlayerForm())
+            {
+                if (pf.ShowDialog() != DialogResult.OK)
+                {
+                    Application.Exit();
+                    return;
+                }
+
+                currentPlayerName = pf.PlayerName;
+            }
+
+            // restart game state
+            ResetGame();
+
+            this.Show(); // show game again
         }
     }
 }
