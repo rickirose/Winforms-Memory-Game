@@ -40,6 +40,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 0;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // btnPlay
             // 
@@ -73,7 +74,6 @@
             label2.TabIndex = 3;
             label2.Text = "INPUT NAME";
             label2.TextAlign = ContentAlignment.MiddleCenter;
-            label2.Click += label2_Click;
             // 
             // PlayerForm
             // 

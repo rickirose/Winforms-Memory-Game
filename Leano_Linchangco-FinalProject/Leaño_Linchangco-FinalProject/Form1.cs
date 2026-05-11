@@ -15,10 +15,22 @@ namespace Leaño_Linchangco_FinalProject
         private int timeLeft = 120; //2 mins
         private bool isFlipping = false;
         private bool isBusy = false;
+        private string currentPlayerName;
 
         public Form1()
         {
             InitializeComponent();
+            using (PlayerForm pf = new PlayerForm())
+            {
+                if (pf.ShowDialog() != DialogResult.OK)
+                {
+                    Application.Exit();
+                    return;
+                }
+
+                currentPlayerName = pf.PlayerName;
+            }
+
             AssignIconsToButtons();
             gameTimer.Tick += GameTimer_Tick;
             gameTimer.Start();
