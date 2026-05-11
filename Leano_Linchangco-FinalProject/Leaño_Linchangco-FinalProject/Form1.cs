@@ -14,6 +14,7 @@ namespace Leaño_Linchangco_FinalProject
         private Button secondClicked;
         private int timeLeft = 120; //2 mins
         private bool isFlipping = false;
+        private bool isBusy = false;
 
         public Form1()
         {
@@ -83,7 +84,7 @@ namespace Leaño_Linchangco_FinalProject
 
         private async void Card_Click(object sender, EventArgs e)
         {
-            if (isFlipping) return;
+            if (isBusy || isFlipping) return;   // Added isBusy for extra safety.
 
             Button clickedBtn = sender as Button;
             if (clickedBtn == null || clickedBtn.Text != "") return;
@@ -98,10 +99,13 @@ namespace Leaño_Linchangco_FinalProject
             secondClicked = clickedBtn;
             await FlipCard(secondClicked, true);
 
-            CheckForMatch();
+            // Prevents further clicks until we check for a match.
+            isBusy = true;
+            await CheckForMatch();
+            isBusy = false;
         }
 
-        private async void CheckForMatch()
+        private async Task CheckForMatch()
         {
             if (firstClicked.Text == secondClicked.Text)
             {

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Code Stuff\\Winforms-Memory-Game\\Leano_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject.csproj": {}
+    "C:\\Users\\WINDOWS 10 PRO\\Documents\\School_Stuff\\Ateneo\\CLASSES\\3rd_Year_Sem2\\ISCS\\Winforms-Memory-Game\\Leano_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject.csproj": {}
   },
   "projects": {
-    "E:\\Code Stuff\\Winforms-Memory-Game\\Leano_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject.csproj": {
+    "C:\\Users\\WINDOWS 10 PRO\\Documents\\School_Stuff\\Ateneo\\CLASSES\\3rd_Year_Sem2\\ISCS\\Winforms-Memory-Game\\Leano_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Code Stuff\\Winforms-Memory-Game\\Leano_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject.csproj",
+        "projectUniqueName": "C:\\Users\\WINDOWS 10 PRO\\Documents\\School_Stuff\\Ateneo\\CLASSES\\3rd_Year_Sem2\\ISCS\\Winforms-Memory-Game\\Leano_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject.csproj",
         "projectName": "Leaño_Linchangco-FinalProject",
-        "projectPath": "E:\\Code Stuff\\Winforms-Memory-Game\\Leano_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject.csproj",
-        "packagesPath": "C:\\Users\\Mochi\\.nuget\\packages\\",
-        "outputPath": "E:\\Code Stuff\\Winforms-Memory-Game\\Leano_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject\\obj\\",
+        "projectPath": "C:\\Users\\WINDOWS 10 PRO\\Documents\\School_Stuff\\Ateneo\\CLASSES\\3rd_Year_Sem2\\ISCS\\Winforms-Memory-Game\\Leano_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject.csproj",
+        "packagesPath": "C:\\Users\\WINDOWS 10 PRO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\WINDOWS 10 PRO\\Documents\\School_Stuff\\Ateneo\\CLASSES\\3rd_Year_Sem2\\ISCS\\Winforms-Memory-Game\\Leano_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mochi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\WINDOWS 10 PRO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.310/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.313/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

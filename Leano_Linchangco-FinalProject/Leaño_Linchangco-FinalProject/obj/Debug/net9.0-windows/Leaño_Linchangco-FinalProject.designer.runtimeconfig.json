@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\Mochi\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Mochi\\.nuget\\packages"
+      "C:\\Users\\WINDOWS 10 PRO\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\WINDOWS 10 PRO\\.nuget\\packages"
     ],
     "configProperties": {
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false,

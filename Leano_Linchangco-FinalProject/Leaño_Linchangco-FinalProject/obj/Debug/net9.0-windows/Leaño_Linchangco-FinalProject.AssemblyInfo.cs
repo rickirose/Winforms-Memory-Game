@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Leaño_Linchangco-FinalProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5ed9ef80439f1a25c0ae02990afe546294d7cbee")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ba3f987bd839801dda6bf82b24f7a22728e1a4d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Leaño_Linchangco-FinalProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Leaño_Linchangco-FinalProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
