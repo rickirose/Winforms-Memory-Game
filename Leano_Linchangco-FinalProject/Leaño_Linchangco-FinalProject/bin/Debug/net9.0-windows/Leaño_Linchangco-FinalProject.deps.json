@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Leaño_Linchangco-FinalProject/1.0.0": {
+        "runtime": {
+          "Leaño_Linchangco-FinalProject.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Leaño_Linchangco-FinalProject/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

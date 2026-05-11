@@ -1,0 +1,17 @@
+E:\Code Stuff\Winforms-Memory-Game\Leano_Linchangco-FinalProject\Leaño_Linchangco-FinalProject\bin\Debug\net9.0-windows\Leaño_Linchangco-FinalProject.exe
+E:\Code Stuff\Winforms-Memory-Game\Leano_Linchangco-FinalProject\Leaño_Linchangco-FinalProject\bin\Debug\net9.0-windows\Leaño_Linchangco-FinalProject.deps.json
+E:\Code Stuff\Winforms-Memory-Game\Leano_Linchangco-FinalProject\Leaño_Linchangco-FinalProject\bin\Debug\net9.0-windows\Leaño_Linchangco-FinalProject.runtimeconfig.json
+E:\Code Stuff\Winforms-Memory-Game\Leano_Linchangco-FinalProject\Leaño_Linchangco-FinalProject\bin\Debug\net9.0-windows\Leaño_Linchangco-FinalProject.dll
+E:\Code Stuff\Winforms-Memory-Game\Leano_Linchangco-FinalProject\Leaño_Linchangco-FinalProject\bin\Debug\net9.0-windows\Leaño_Linchangco-FinalProject.pdb
+E:\Code Stuff\Winforms-Memory-Game\Leano_Linchangco-FinalProject\Leaño_Linchangco-FinalProject\obj\Debug\net9.0-windows\Leaño_Linchangco_FinalProject.Form1.resources
+E:\Code Stuff\Winforms-Memory-Game\Leano_Linchangco-FinalProject\Leaño_Linchangco-FinalProject\obj\Debug\net9.0-windows\Leaño_Linchangco-FinalProject.csproj.GenerateResource.cache
+E:\Code Stuff\Winforms-Memory-Game\Leano_Linchangco-FinalProject\Leaño_Linchangco-FinalProject\obj\Debug\net9.0-windows\Leaño_Linchangco-FinalProject.GeneratedMSBuildEditorConfig.editorconfig
+E:\Code Stuff\Winforms-Memory-Game\Leano_Linchangco-FinalProject\Leaño_Linchangco-FinalProject\obj\Debug\net9.0-windows\Leaño_Linchangco-FinalProject.AssemblyInfoInputs.cache
+E:\Code Stuff\Winforms-Memory-Game\Leano_Linchangco-FinalProject\Leaño_Linchangco-FinalProject\obj\Debug\net9.0-windows\Leaño_Linchangco-FinalProject.AssemblyInfo.cs
+E:\Code Stuff\Winforms-Memory-Game\Leano_Linchangco-FinalProject\Leaño_Linchangco-FinalProject\obj\Debug\net9.0-windows\Leaño_Linchangco-FinalProject.csproj.CoreCompileInputs.cache
+E:\Code Stuff\Winforms-Memory-Game\Leano_Linchangco-FinalProject\Leaño_Linchangco-FinalProject\obj\Debug\net9.0-windows\Leaño_Linchangco-FinalProject.sourcelink.json
+E:\Code Stuff\Winforms-Memory-Game\Leano_Linchangco-FinalProject\Leaño_Linchangco-FinalProject\obj\Debug\net9.0-windows\Leaño_Linchangco-FinalProject.dll
+E:\Code Stuff\Winforms-Memory-Game\Leano_Linchangco-FinalProject\Leaño_Linchangco-FinalProject\obj\Debug\net9.0-windows\refint\Leaño_Linchangco-FinalProject.dll
+E:\Code Stuff\Winforms-Memory-Game\Leano_Linchangco-FinalProject\Leaño_Linchangco-FinalProject\obj\Debug\net9.0-windows\Leaño_Linchangco-FinalProject.pdb
+E:\Code Stuff\Winforms-Memory-Game\Leano_Linchangco-FinalProject\Leaño_Linchangco-FinalProject\obj\Debug\net9.0-windows\Leaño_Linchangco-FinalProject.genruntimeconfig.cache
+E:\Code Stuff\Winforms-Memory-Game\Leano_Linchangco-FinalProject\Leaño_Linchangco-FinalProject\obj\Debug\net9.0-windows\ref\Leaño_Linchangco-FinalProject.dll

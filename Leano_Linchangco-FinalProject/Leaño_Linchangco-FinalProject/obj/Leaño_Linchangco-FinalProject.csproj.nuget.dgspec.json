@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Code Stuff\\C#\\Leano_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject.csproj": {}
+    "E:\\Code Stuff\\Winforms-Memory-Game\\Leano_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject.csproj": {}
   },
   "projects": {
-    "E:\\Code Stuff\\C#\\Leano_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject.csproj": {
+    "E:\\Code Stuff\\Winforms-Memory-Game\\Leano_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Code Stuff\\C#\\Leano_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject.csproj",
+        "projectUniqueName": "E:\\Code Stuff\\Winforms-Memory-Game\\Leano_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject.csproj",
         "projectName": "Leaño_Linchangco-FinalProject",
-        "projectPath": "E:\\Code Stuff\\C#\\Leano_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject.csproj",
+        "projectPath": "E:\\Code Stuff\\Winforms-Memory-Game\\Leano_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject.csproj",
         "packagesPath": "C:\\Users\\Mochi\\.nuget\\packages\\",
-        "outputPath": "E:\\Code Stuff\\C#\\Leano_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject\\obj\\",
+        "outputPath": "E:\\Code Stuff\\Winforms-Memory-Game\\Leano_Linchangco-FinalProject\\Leaño_Linchangco-FinalProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mochi\\AppData\\Roaming\\NuGet\\NuGet.Config",
