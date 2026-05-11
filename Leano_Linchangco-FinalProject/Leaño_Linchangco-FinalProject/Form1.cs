@@ -179,9 +179,14 @@ namespace Leaño_Linchangco_FinalProject
             }
             gameTimer.Stop();
             MessageBox.Show($"Congratulations {currentPlayerName} ! You completed the board!\nFinal Score: {score}");
+
             // save high score
+            ScoreManager.SaveScore(currentPlayerName, score);
+
             // show leaderboards
-            ReturnToPlayerForm();
+            ShowLeaderboard();
+
+            //ReturnToPlayerForm();
         }
 
         private void ResetGame()
@@ -189,6 +194,10 @@ namespace Leaño_Linchangco_FinalProject
             // Clear buttons and reset variables
             firstClicked = null;
             secondClicked = null;
+
+            // Reset score and combo
+            score = 100;
+            consecutiveMatches = 0;
 
             UpdateScore();
             tableLayoutPanel1.Controls.Clear();
@@ -223,10 +232,12 @@ namespace Leaño_Linchangco_FinalProject
 
             this.Show(); // show game again
         }
-
-        private void lblScore_Click(object sender, EventArgs e)
+        private void ShowLeaderboard()
         {
+            LeaderboardForm lb = new LeaderboardForm();
+            lb.ShowDialog();
 
+            ReturnToPlayerForm();
         }
     }
 }
