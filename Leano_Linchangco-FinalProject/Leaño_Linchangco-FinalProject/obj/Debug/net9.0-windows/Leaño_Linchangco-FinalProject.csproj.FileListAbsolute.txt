@@ -34,3 +34,7 @@ C:\Users\WINDOWS 10 PRO\Documents\School_Stuff\Ateneo\CLASSES\3rd_Year_Sem2\ISCS
 C:\Users\WINDOWS 10 PRO\Documents\School_Stuff\Ateneo\CLASSES\3rd_Year_Sem2\ISCS\Winforms-Memory-Game\Leano_Linchangco-FinalProject\Leaño_Linchangco-FinalProject\obj\Debug\net9.0-windows\ref\Leaño_Linchangco-FinalProject.dll
 C:\Users\WINDOWS 10 PRO\Documents\School_Stuff\Ateneo\CLASSES\3rd_Year_Sem2\ISCS\Winforms-Memory-Game\Leano_Linchangco-FinalProject\Leaño_Linchangco-FinalProject\obj\Debug\net9.0-windows\Leaño_Linchangco_FinalProject.PlayerForm.resources
 C:\Users\WINDOWS 10 PRO\Documents\School_Stuff\Ateneo\CLASSES\3rd_Year_Sem2\ISCS\Winforms-Memory-Game\Leano_Linchangco-FinalProject\Leaño_Linchangco-FinalProject\obj\Debug\net9.0-windows\Leaño_Linchangco_FinalProject.LeaderboardForm.resources
+E:\Code Stuff\Winforms-Memory-Game\Leano_Linchangco-FinalProject\Leaño_Linchangco-FinalProject\obj\Debug\net9.0-windows\Leaño_Linchangco-FinalProject.g.resources
+E:\Code Stuff\Winforms-Memory-Game\Leano_Linchangco-FinalProject\Leaño_Linchangco-FinalProject\obj\Debug\net9.0-windows\Leaño_Linchangco_FinalProject.LeaderboardForm.resources
+E:\Code Stuff\Winforms-Memory-Game\Leano_Linchangco-FinalProject\Leaño_Linchangco-FinalProject\obj\Debug\net9.0-windows\Leaño_Linchangco_FinalProject.PlayerForm.resources
+E:\Code Stuff\Winforms-Memory-Game\Leano_Linchangco-FinalProject\Leaño_Linchangco-FinalProject\obj\Debug\net9.0-windows\Leaño_Linchangco_FinalProject.Properties.Resources.resources

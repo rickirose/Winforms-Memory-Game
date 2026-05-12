@@ -36,5 +36,20 @@ namespace Leaño_Linchangco_FinalProject
         {
             btnPlay.Enabled = !string.IsNullOrWhiteSpace(tbxName.Text);
         }
+
+        private void btnLeaderboard_Click(object sender, EventArgs e)
+        {
+            LeaderboardForm lb = new LeaderboardForm();
+            lb.ShowDialog();
+        }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to quit?", "Exit Game?", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }

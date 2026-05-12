@@ -2,13 +2,26 @@ namespace Leaño_Linchangco_FinalProject
 {
     public partial class Form1 : Form
     {
-        private List<string> icons = new List<string>()
+        private Image cardBack = Properties.Resources.Back;
+
+        private List<Image> icons = new List<Image>();
+        private void LoadResources()
         {
-            "Pierro", "Pierro", "Capitano", "Capitano", "Dottore", "Dottore",
-            "Columbina", "Columbina", "Arlecchino", "Arlecchino", "Pulchinella", "Pulchinella",
-            "Scaramouche", "Scaramouche", "Sandrone", "Sandrone", "Signora", "Signora",
-            "Pantalone", "Pantalone", "Descender", "Descender", "Tartaglia", "Tartaglia"
-        };
+            List<Image> faces = new List<Image>
+            {
+                Properties.Resources.Pierro, Properties.Resources.Capitano,
+                Properties.Resources.Dottore, Properties.Resources.Columbina,
+                Properties.Resources.Arlecchino, Properties.Resources.Pulcinella,
+                Properties.Resources.Scaramouche, Properties.Resources.Sandrone,
+                Properties.Resources.Signora, Properties.Resources.Pantalone,
+                Properties.Resources.Descender, Properties.Resources.Tartaglia
+            };
+            foreach (var face in faces)
+            {
+                icons.Add(face);
+                icons.Add(face); // add pairs
+            }
+        }
 
         private Button firstClicked;
         private Button secondClicked;
@@ -39,21 +52,24 @@ namespace Leaño_Linchangco_FinalProject
 
         private void AssignIconsToButtons()
         {
+            LoadResources();
             Random random = new Random();
-            for (int i = 0; i < 24; i++)
+            while (icons.Count > 0)
             {
+                int index = random.Next(icons.Count);
+                Image selectedImage = icons[index];
                 Button btn = new Button
                 {
                     Dock = DockStyle.Fill,
-                    Font = new Font("Arial", 24, FontStyle.Bold),
-                    Text = "",
-                    BackColor = Color.LightBlue,
-                    Tag = icons[random.Next(icons.Count)],
+                    BackgroundImage = cardBack,
+                    BackgroundImageLayout = ImageLayout.Stretch,
+                    Tag = selectedImage,
                     Margin = new Padding(5)
                 };
-                icons.Remove((string)btn.Tag);
+
+                icons.RemoveAt(index);
                 btn.Click += Card_Click;
-                tableLayoutPanel1.Controls.Add(btn, i % 6, i / 6);
+                tableLayoutPanel1.Controls.Add(btn);
             }
         }
 
@@ -62,25 +78,24 @@ namespace Leaño_Linchangco_FinalProject
         {
             isFlipping = true;
             int originalWidth = btn.Width;
+            int originalLeft = btn.Left;
 
             // squeeze card size
-            for (int i = originalWidth; i > 0; i -= 15)
+            for (int i = originalWidth; i > 0; i -= 20)
             {
                 btn.Width = i;
-                btn.Left += 7;
+                btn.Left += 10;
                 await Task.Delay(10);
             }
 
             // change card face
             if (isFaceUp)
             {
-                btn.Text = btn.Tag.ToString();
-                btn.BackColor = Color.White;
+                btn.BackgroundImage = (Image)btn.Tag;
             }
             else
             {
-                btn.Text = "";
-                btn.BackColor = Color.LightBlue;
+                btn.BackgroundImage = Properties.Resources.Back;
             }
 
             // expand card size back to original
@@ -100,7 +115,9 @@ namespace Leaño_Linchangco_FinalProject
             if (isBusy || isFlipping) return;   // Added isBusy for extra safety.
 
             Button clickedBtn = sender as Button;
-            if (clickedBtn == null || clickedBtn.Text != "") return;
+            if (clickedBtn == null || clickedBtn == firstClicked) return;
+
+            if (clickedBtn.Enabled == false) return;
 
             if (firstClicked == null)
             {
@@ -109,10 +126,12 @@ namespace Leaño_Linchangco_FinalProject
                 return;
             }
 
+            if (clickedBtn == firstClicked) return;
+
             secondClicked = clickedBtn;
             await FlipCard(secondClicked, true);
 
-            // Prevents further clicks until we check for a match.
+            // Prevents further clicks until match check.
             isBusy = true;
             await CheckForMatch();
             isBusy = false;
@@ -120,7 +139,7 @@ namespace Leaño_Linchangco_FinalProject
 
         private async Task CheckForMatch()
         {
-            if (firstClicked.Text == secondClicked.Text)
+            if (firstClicked.Tag == secondClicked.Tag)
             {
                 // Combo increase
                 consecutiveMatches++;
@@ -134,6 +153,9 @@ namespace Leaño_Linchangco_FinalProject
                 score += gainedScore;
                 UpdateScore();
 
+                firstClicked.Enabled = false;
+                secondClicked.Enabled = false;
+
                 firstClicked = null;
                 secondClicked = null;
                 CheckWin();
@@ -145,7 +167,7 @@ namespace Leaño_Linchangco_FinalProject
 
                 UpdateScore();
 
-                await Task.Delay(1000); // Let the player see their mistake
+                await Task.Delay(750); // Let the player see their mistake
 
                 await FlipCard(firstClicked, false);
                 await FlipCard(secondClicked, false);
@@ -173,8 +195,7 @@ namespace Leaño_Linchangco_FinalProject
         {
             foreach (Control control in tableLayoutPanel1.Controls)
             {
-                Button btn = control as Button;
-                if (btn != null && btn.Text == "")
+                if (control is Button btn && btn.Enabled == true)
                     return;
             }
             gameTimer.Stop();
@@ -191,26 +212,31 @@ namespace Leaño_Linchangco_FinalProject
 
         private void ResetGame()
         {
+            gameTimer.Stop();
+
             // Clear buttons and reset variables
             firstClicked = null;
             secondClicked = null;
-
-            // Reset score and combo
             score = 100;
             consecutiveMatches = 0;
-
             UpdateScore();
-            tableLayoutPanel1.Controls.Clear();
-            icons = new List<string>()
-            {
-                "Pierro", "Pierro", "Capitano", "Capitano", "Dottore", "Dottore",
-                "Columbina", "Columbina", "Arlecchino", "Arlecchino", "Pulchinella", "Pulchinella",
-                "Scaramouche", "Scaramouche", "Sandrone", "Sandrone", "Signora", "Signora",
-                "Pantalone", "Pantalone", "Descender", "Descender", "Tartaglia", "Tartaglia"
-            };
-            AssignIconsToButtons();
-            gameTimer.Start();
 
+            tableLayoutPanel1.Controls.Clear();
+            tableLayoutPanel1.RowStyles.Clear();
+            tableLayoutPanel1.ColumnStyles.Clear();
+            tableLayoutPanel1.RowCount = 4;
+            tableLayoutPanel1.ColumnCount = 6;
+
+            for (int i = 0; i < 4; i++)
+                tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25f));
+            for (int i = 0; i < 6; i++)
+                tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.66f));
+
+            icons.Clear();
+            LoadResources();
+            AssignIconsToButtons();
+
+            gameTimer.Start();
         }
         private void ReturnToPlayerForm()
         {
@@ -238,6 +264,25 @@ namespace Leaño_Linchangco_FinalProject
             lb.ShowDialog();
 
             ReturnToPlayerForm();
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to quit? Your progress will be lost!", "Return to menu?", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                gameTimer.Stop();
+                ReturnToPlayerForm();
+            }
+        }
+
+        private void btnRestart_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to reset the board?","Reset Board",MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                ResetGame();
+            }
         }
     }
 }
