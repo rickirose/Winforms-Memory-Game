@@ -30,7 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             tableLayoutPanel1 = new TableLayoutPanel();
-            scoreLbl = new Label();
+            lblScore = new Label();
             gameTimer = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
@@ -45,7 +45,7 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.666666F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.666666F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.666666F));
-            tableLayoutPanel1.Font = new Font("HYWenHei-85W", 5.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tableLayoutPanel1.Font = new Font("Microsoft Sans Serif", 5.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tableLayoutPanel1.Location = new Point(131, 12);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 4;
@@ -56,15 +56,15 @@
             tableLayoutPanel1.Size = new Size(657, 426);
             tableLayoutPanel1.TabIndex = 0;
             // 
-            // scoreLbl
+            // lblScore
             // 
-            scoreLbl.AutoSize = true;
-            scoreLbl.Font = new Font("HYWenHei-85W", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            scoreLbl.Location = new Point(28, 50);
-            scoreLbl.Name = "scoreLbl";
-            scoreLbl.Size = new Size(71, 15);
-            scoreLbl.TabIndex = 1;
-            scoreLbl.Text = "Score: 120";
+            lblScore.AutoSize = true;
+            lblScore.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblScore.Location = new Point(28, 50);
+            lblScore.Name = "lblScore";
+            lblScore.Size = new Size(66, 15);
+            lblScore.TabIndex = 1;
+            lblScore.Text = "Score: 100 PTS";
             // 
             // gameTimer
             // 
@@ -75,7 +75,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(scoreLbl);
+            Controls.Add(lblScore);
             Controls.Add(tableLayoutPanel1);
             Name = "Form1";
             Text = "Form1";
@@ -86,7 +86,7 @@
         #endregion
 
         private TableLayoutPanel tableLayoutPanel1;
-        private Label scoreLbl;
+        private Label lblScore;
         private System.Windows.Forms.Timer gameTimer;
     }
 }

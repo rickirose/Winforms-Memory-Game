@@ -12,12 +12,26 @@ namespace Leaño_Linchangco_FinalProject
 
         private Button firstClicked;
         private Button secondClicked;
-        private int timeLeft = 120; //2 mins
+        private int score = 100;
         private bool isFlipping = false;
+        private bool isBusy = false;
+        private string currentPlayerName;
+        private int consecutiveMatches = 0;
 
         public Form1()
         {
             InitializeComponent();
+            using (PlayerForm pf = new PlayerForm())
+            {
+                if (pf.ShowDialog() != DialogResult.OK)
+                {
+                    Application.Exit();
+                    return;
+                }
+
+                currentPlayerName = pf.PlayerName;
+            }
+
             AssignIconsToButtons();
             gameTimer.Tick += GameTimer_Tick;
             gameTimer.Start();
@@ -83,7 +97,7 @@ namespace Leaño_Linchangco_FinalProject
 
         private async void Card_Click(object sender, EventArgs e)
         {
-            if (isFlipping) return;
+            if (isBusy || isFlipping) return;   // Added isBusy for extra safety.
 
             Button clickedBtn = sender as Button;
             if (clickedBtn == null || clickedBtn.Text != "") return;
@@ -98,20 +112,37 @@ namespace Leaño_Linchangco_FinalProject
             secondClicked = clickedBtn;
             await FlipCard(secondClicked, true);
 
-            CheckForMatch();
+            // Prevents further clicks until we check for a match.
+            isBusy = true;
+            await CheckForMatch();
+            isBusy = false;
         }
 
-        private async void CheckForMatch()
+        private async Task CheckForMatch()
         {
             if (firstClicked.Text == secondClicked.Text)
             {
+                // Combo increase
+                consecutiveMatches++;
+
+                // Base score increase
+                int baseGain = 10;
+
+                // Combo Multiplier (1.5x)
+                double multiplier = Math.Pow(1.5, consecutiveMatches - 1);
+                int gainedScore = (int)(baseGain * multiplier);
+                score += gainedScore;
+                UpdateScore();
+
                 firstClicked = null;
                 secondClicked = null;
                 CheckWin();
             }
             else
             {
-                timeLeft -= 5; // Lose 5 points/seconds
+                // Reset combo
+                consecutiveMatches = 0;
+
                 UpdateScore();
 
                 await Task.Delay(1000); // Let the player see their mistake
@@ -126,20 +157,16 @@ namespace Leaño_Linchangco_FinalProject
 
         private void GameTimer_Tick(object sender, EventArgs e)
         {
-            timeLeft--;
-            UpdateScore();
-
-            if (timeLeft <= 0)
+            if (score > 10)
             {
-                gameTimer.Stop();
-                MessageBox.Show("Time's up! You lose!");
-                ResetGame();
+                score--;
+                UpdateScore();
             }
         }
 
         private void UpdateScore()
         {
-            // lblScore.Text = something to show score
+            lblScore.Text = "Score: " + score + "PTS";
         }
 
         private void CheckWin()
@@ -151,9 +178,15 @@ namespace Leaño_Linchangco_FinalProject
                     return;
             }
             gameTimer.Stop();
-            MessageBox.Show("Congratulations! You win!");
+            MessageBox.Show($"Congratulations {currentPlayerName} ! You completed the board!\nFinal Score: {score}");
+
             // save high score
-            ResetGame();
+            ScoreManager.SaveScore(currentPlayerName, score);
+
+            // show leaderboards
+            ShowLeaderboard();
+
+            //ReturnToPlayerForm();
         }
 
         private void ResetGame()
@@ -161,7 +194,11 @@ namespace Leaño_Linchangco_FinalProject
             // Clear buttons and reset variables
             firstClicked = null;
             secondClicked = null;
-            timeLeft = 120;
+
+            // Reset score and combo
+            score = 100;
+            consecutiveMatches = 0;
+
             UpdateScore();
             tableLayoutPanel1.Controls.Clear();
             icons = new List<string>()
@@ -174,6 +211,33 @@ namespace Leaño_Linchangco_FinalProject
             AssignIconsToButtons();
             gameTimer.Start();
 
+        }
+        private void ReturnToPlayerForm()
+        {
+            this.Hide(); // hide game form
+
+            using (PlayerForm pf = new PlayerForm())
+            {
+                if (pf.ShowDialog() != DialogResult.OK)
+                {
+                    Application.Exit();
+                    return;
+                }
+
+                currentPlayerName = pf.PlayerName;
+            }
+
+            // restart game state
+            ResetGame();
+
+            this.Show(); // show game again
+        }
+        private void ShowLeaderboard()
+        {
+            LeaderboardForm lb = new LeaderboardForm();
+            lb.ShowDialog();
+
+            ReturnToPlayerForm();
         }
     }
 }
